@@ -7,4 +7,5 @@ Static website of Calder & Wynne, served by GitHub Pages at https://calderwynne.
 - The C&W mark is inlined as SVG (same geometry as `components/brand.py`).
 - DNS (OVH): apex A/AAAA to GitHub Pages, `www` CNAME `daharness.github.io`. `CNAME` file holds the custom domain.
 
-No build step: edit and push to `main`.
+No build step on GitHub: pages are generated locally by `build.py` (EN at `/`, FR at `/fr/`; 6 pages each), then pushed by `deploy.py`.
+Partners, deals, figures and quotes are FICTIONAL placeholders (`NOINDEX = True` in `build.py` until replaced).
