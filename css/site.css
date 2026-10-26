@@ -1,0 +1,96 @@
+/* Calder & Wynne website. Screen adaptation of the design system (tokens.css + base.css copied verbatim).
+   Same rules as print: white pages, navy and steel, serif for titles and key figures, sans for the rest,
+   steel only for numbering. */
+
+html { -webkit-text-size-adjust: 100%; }
+body { background: var(--white); font-size: 17px; line-height: 1.55; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 40px; }
+
+/* ---- header ---- */
+.top { border-top: 6px solid var(--ink); border-bottom: 1px solid var(--rule); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; height: 76px; }
+.lockup { display: flex; align-items: center; gap: 14px; }
+.lockup svg { display: block; }
+.wm { font-weight: 600; letter-spacing: .16em; font-size: 13px; white-space: nowrap; line-height: 1; }
+.nav { display: flex; gap: 32px; font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--slate); }
+.nav a:hover, .nav a:focus-visible { color: var(--ink); }
+
+/* ---- cover: the full-report cover, on screen ---- */
+.cover { display: grid; grid-template-columns: 300px 1fr; min-height: calc(100vh - 82px); max-height: 860px; border-bottom: 1px solid var(--rule); }
+.cover .col { background: var(--mist); border-right: 1px solid var(--rule); padding: 72px 40px 48px; display: flex; flex-direction: column; }
+.cover .col .wm { margin-top: 22px; font-size: 12px; }
+.col-desc { margin-top: auto; font-size: 13px; line-height: 1.8; color: var(--slate); }
+.cover .body { padding: 72px 64px 48px 72px; display: flex; flex-direction: column; justify-content: center; }
+.kicker { font-size: 13px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--steel); margin-bottom: 18px; }
+.title { font-family: var(--serif); font-size: clamp(40px, 5.4vw, 68px); font-weight: 600; line-height: 1.05; max-width: 15ch; }
+.sub { font-size: 19px; color: var(--slate); line-height: 1.55; max-width: 38em; margin-top: 22px; }
+.rule { height: 1.5px; background: var(--ink); margin: 40px 0 6px; }
+.conf { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--slate); margin-top: 40px; }
+
+/* ---- meta table (cover details, offices) ---- */
+table.meta { border-collapse: collapse; width: 100%; font-size: 16px; }
+table.meta td { padding: 12px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+table.meta td:first-child { width: 190px; color: var(--slate); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; padding-top: 15px; }
+
+/* ---- sections ---- */
+.sec { padding: 104px 0; border-bottom: 1px solid var(--rule); }
+.sec.mist { background: var(--mist); }
+.eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--steel); margin-bottom: 14px; }
+h2 { font-family: var(--serif); font-size: clamp(30px, 3.4vw, 42px); font-weight: 600; line-height: 1.12; max-width: 22ch; }
+.lead { font-size: 19px; color: var(--slate); max-width: 40em; margin-top: 18px; }
+
+/* contents-style list: steel serif numbers, serif titles, hairlines */
+.ag { margin-top: 56px; border-top: 1.5px solid var(--ink); }
+.ag li { list-style: none; display: grid; grid-template-columns: 72px minmax(0, 1fr) minmax(0, 1.25fr); gap: 0 32px; align-items: baseline; padding: 30px 0; border-bottom: 1px solid var(--rule); }
+.agn { font-family: var(--serif); font-size: 28px; font-weight: 600; color: var(--steel); font-feature-settings: 'tnum' 1, 'lnum' 1; }
+.agt { font-family: var(--serif); font-size: 26px; font-weight: 600; line-height: 1.2; }
+.agd { color: var(--slate); font-size: 17px; }
+.agd .tags { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; padding: 3px 8px; background: var(--white); color: var(--ink); border: 1px solid var(--rule); }
+
+/* principles: the house rules, two columns */
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.com { margin: 0; padding-left: 22px; font-size: 17px; }
+.com li { margin-bottom: 20px; }
+.com li::marker { color: var(--steel); font-weight: 600; }
+.com b { font-weight: 600; }
+.call { background: var(--white); border-left: 6px solid var(--steel); padding: 22px 28px; font-size: 21px; font-weight: 600; line-height: 1.4; }
+.sec.mist .call { background: var(--white); }
+.call b { display: block; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--steel); margin-bottom: 8px; }
+
+/* offices */
+.offices { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 48px; }
+.office { border-top: 3px solid var(--ink); padding-top: 18px; }
+.office .city { font-family: var(--serif); font-size: 32px; font-weight: 600; }
+.office .what { font-size: 15px; color: var(--slate); margin-top: 6px; }
+
+/* ---- footer ---- */
+.foot { background: var(--ink); color: var(--white); padding: 64px 0 40px; }
+.foot .wrap { display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: end; }
+.foot .wm { color: var(--white); margin-top: 18px; font-size: 12px; }
+.foot .small { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--light); text-align: right; line-height: 1.9; }
+.foot .legal { grid-column: 1 / -1; border-top: 1px solid var(--steel); padding-top: 20px; font-size: 13px; color: var(--light); }
+
+a:focus-visible { outline: 2px solid var(--steel); outline-offset: 3px; }
+
+/* ---- small screens ---- */
+@media (max-width: 860px) {
+  body { font-size: 16px; }
+  .wrap { padding: 0 22px; }
+  .nav { display: none; }
+  .cover { grid-template-columns: 1fr; min-height: 0; max-height: none; }
+  .cover .col { padding: 32px 22px; border-right: 0; border-bottom: 1px solid var(--rule); flex-direction: row; flex-wrap: wrap; align-items: center; gap: 14px 24px; }
+  .cover .col .wm { margin-top: 0; }
+  .col-desc { margin-top: 0; flex-basis: 100%; }
+  .cover .body { padding: 56px 22px; }
+  .sec { padding: 72px 0; }
+  .ag li { grid-template-columns: 48px 1fr; gap: 8px 16px; }
+  .agd { grid-column: 2; }
+  .agn { font-size: 22px; } .agt { font-size: 22px; }
+  .two, .offices { grid-template-columns: 1fr; gap: 40px; }
+  table.meta td:first-child { width: 120px; }
+  .foot .wrap { grid-template-columns: 1fr; }
+  .foot .small { text-align: left; }
+}
+
+@media print { .top, .nav { display: none; } }

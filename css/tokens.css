@@ -1,0 +1,17 @@
+/* Calder & Wynne design tokens. Mirrored in components/tokens.py for SVG charts. */
+:root {
+  --ink: #1B2A41;      /* navy: text, logo, totals */
+  --steel: #3E5C76;    /* accent: numbering, key figures, price impacts */
+  --slate: #5B6472;    /* secondary text, captions */
+  --light: #9FB2C4;    /* chart bars, mid-level tags */
+  --rule: #C9CED6;     /* hairlines, borders */
+  --mist: #EEF1F5;     /* rail, boxes, totals */
+  --white: #FFFFFF;
+  --serif: 'Source Serif 4', Georgia, serif;
+  --sans: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+
+  /* table metrics, overridden per medium (slides.css, document.css) */
+  --t-size: 8.6pt;
+  --th-size: 7pt;
+  --td-pad: 1.1mm 1.5mm;
+}
