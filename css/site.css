@@ -226,6 +226,12 @@ form.f { background: var(--white); border: 1px solid var(--rule); padding: 36px;
 .prose td { border-bottom: 1px solid var(--rule); padding: 9px 12px; vertical-align: top; }
 .prose .tags { display: flex; gap: 6px; flex-wrap: wrap; }
 .disc { font-size: 13px; color: var(--slate); margin-top: 20px; }
+.prose .sources { margin-top: 48px; padding-top: 24px; border-top: 1.5px solid var(--ink); }
+.prose .sources h2 { font-family: var(--sans); font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--steel); margin: 0 0 14px; }
+.prose .sources ol { margin: 0 0 0 22px; font-size: 14px; line-height: 1.55; color: var(--slate); }
+.prose .sources li { margin-bottom: 8px; overflow-wrap: anywhere; }
+.prose .sources a { color: var(--ink); font-weight: 600; }
+@media (min-width: 1081px) and (max-width: 1300px) { .nav { gap: 18px; font-size: 14px; } .top .wm { display: none; } }
 
 a:focus-visible, .btn:focus-visible { outline: 2px solid var(--steel); outline-offset: 3px; }
 
