@@ -8,4 +8,4 @@ Static website of Calder & Wynne, served by GitHub Pages at https://calderwynne.
 - DNS (OVH): apex A/AAAA to GitHub Pages, `www` CNAME `daharness.github.io`. `CNAME` file holds the custom domain.
 
 No build step on GitHub: pages are generated locally by `build.py` (EN at `/`, FR at `/fr/`; 6 pages each), then pushed by `deploy.py`.
-Partners, deals, figures and quotes are FICTIONAL placeholders (`NOINDEX = True` in `build.py` until replaced).
+Partners, deals, figures and quotes are FICTIONAL placeholders. Indexing is allowed (`NOINDEX = False` in `build.py`, user decision 2026-10-26).
