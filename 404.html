@@ -3,18 +3,49 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Page not found · Calder &amp; Wynne</title>
+<meta name="robots" content="noindex, nofollow">
+<title>Calder &amp; Wynne</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap">
-<link rel="stylesheet" href="/css/tokens.css">
-<link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/css/site.css">
+<style>
+html,body{margin:0;height:100%;background:#1B2A41;color:#fff;font-family:'Source Sans 3',system-ui,sans-serif}
+body{display:flex;align-items:center;justify-content:center}
+.g{width:100%;max-width:360px;padding:32px;text-align:center}
+.g svg{display:block;margin:0 auto 18px}
+.wm{font-weight:600;letter-spacing:.16em;font-size:12px;margin-bottom:40px}
+form{display:flex;flex-direction:column;gap:12px}
+input{font:inherit;font-size:16px;padding:12px 14px;border:1px solid rgba(255,255,255,.4);background:transparent;color:#fff;border-radius:0;text-align:center}
+input:focus{outline:none;border-color:#fff}
+button{font:inherit;font-weight:600;font-size:15px;padding:13px;border:0;background:#fff;color:#1B2A41;cursor:pointer}
+.e{min-height:20px;font-size:14px;color:#E8B4B4}
+.hide{visibility:hidden}
+</style>
 </head>
 <body>
-<section class="sec"><div class="wrap">
-  <div class="eyebrow">404</div>
-  <h2>This page does not exist.</h2>
-  <p class="lead"><a href="/" style="text-decoration:underline">Back to Calder &amp; Wynne</a></p>
-</div></section>
+<div class="g hide" id="g">
+<svg width="120" height="60" viewBox="0 0 240 120" aria-hidden="true"><rect x="2" y="2" width="236" height="116" fill="none" stroke="#fff" stroke-width="3"/><text x="120" y="79" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-size="52" font-weight="600" fill="#fff">C&amp;W</text></svg>
+<div class="wm">CALDER &amp; WYNNE</div>
+<form id="f"><input id="p" type="password" autocomplete="current-password" placeholder="Password" aria-label="Password" autofocus>
+<button type="submit">Enter</button><div class="e" id="e"></div></form>
+</div>
+<script>
+(function(){
+var D={"s":"LBQqvLXlurL9fUgU9Z88nw==","i":"ac2Sz/0QVw+q5gX3","c":"XMunR9EtWFphdmvNNE9lJbH4I4rc3AXZe17i4hjde+sIzABQv7I3TsT5bxblaa9jZSzTOKXhlh4vRzlvNhyxMFgJ4R/NCuphphyIeZI6fPssXgpizRtRJw5/qAiurKlG5a7v/JSA56Y1PhSAziEt0ajKZn+yYttdKo5RPFMTfYXIse/6JZQNyOfPzxigHKRCP1WkvxmGOT5Qx7hLcSsgjUcb3avY9vllIC93BdVCLzT3R+6dk7PKQdL5tzfMKIttlZPfwLlqjea3yLEw3erm3PoPXIR2tV5nplSNuwmlMdKduXZWsrzqn6KYY/MLHECZ4YqYcyvp+zw6qBkQEtP8Y/2RGu9Pu73+jH0Gwr23B3lrEhK+iPbKpGz8pqwDbX5rB1gJYfMlbEdpPkFhVLXQagqBiwdKUmICVuZ9b1qtm3cMy3y24QjZafg7CuyqiJniV5OTe969pF4af1AqRwVToCxWuXzFkmLErRUByGFmPhmeWUgMLtuEs3fAe5lXqyis+/Ebw0EqcQDnPsToZuDuZ6/PQTvFnuVA6rax7z4ltEFZc5xIHfRYwwDPkdRcsSC8cBTmtDjTjF40y0MqGRsgKeJOWHhMeGVxGnY7nuhnohxfUWLLIProppWHjcS6YtJZA+qTjqJN20piEbRLw4GnqauNP9GHyN1OfPhOD/J9HjiQxoVKY4vY+V4XiQ7EPvhWQfy6bRBGzXMODiWF7o7wtvM4XSFZtAuSZ7OTUQuzzX0kCdHAx66FjWj7jwOF/CXXr9VaZe9DrpewAHYF+Wh+GixNh9iJywb/sgLVyhpj2IF0vEOi2CsPmWRueyqOMIqLJzYFS1RJ61te5ZGTTHpH5x4DkO5WDItw3YkMEygOT3k+BiWbplynA08bGvkkNSfU7LTidvVe6yPI8yJ6v/rOvufKD7TQBUYy2XeRb42u7im8Qp4xWHGeyjUMZZhdtpWX9etCPw4+UILOyiRnRfPiq5h6m/pCY7oCzKl8sznNJPRusNNYHTPzvijZ/qD0My99wMtYc7LgVC436l3JvO2zrv1tXENhaR/pcVxtV9+QYb9lkANK7qhQ"},K="cw-key",S=D.s;
+function u(s){return Uint8Array.from(atob(s),function(c){return c.charCodeAt(0)})}
+function open(raw){return crypto.subtle.importKey("raw",raw,"AES-GCM",false,["decrypt"]).then(function(k){
+ return crypto.subtle.decrypt({name:"AES-GCM",iv:u(D.i)},k,u(D.c))}).then(function(b){
+ var h=new TextDecoder().decode(b);document.open();document.write(h);document.close()})}
+function derive(pw){return crypto.subtle.importKey("raw",new TextEncoder().encode(pw),"PBKDF2",false,["deriveBits"]).then(function(m){
+ return crypto.subtle.deriveBits({name:"PBKDF2",salt:u(S),iterations:300000,hash:"SHA-256"},m,256)})}
+function show(){document.getElementById("g").classList.remove("hide")}
+var c=null;try{c=JSON.parse(localStorage.getItem(K))}catch(x){}
+if(c&&c.s===S){open(u(c.k)).catch(function(){localStorage.removeItem(K);show()})}else show();
+document.getElementById("f").addEventListener("submit",function(ev){ev.preventDefault();
+ var e=document.getElementById("e");e.textContent="";
+ derive(document.getElementById("p").value).then(function(raw){var r=new Uint8Array(raw);
+  return open(r).then(function(){try{localStorage.setItem(K,JSON.stringify({s:S,k:btoa(String.fromCharCode.apply(null,r))}))}catch(x){}})})
+ .catch(function(){e.textContent="Incorrect password."})});
+})();
+</script>
 </body>
 </html>
